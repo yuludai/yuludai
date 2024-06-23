@@ -1,0 +1,25 @@
+@startuml component diagram
+package "User Interface" {
+    [Web Interface]
+    [Mobile App]
+}
+
+package "Services" {
+    [Booking Service]
+    [Maintenance Service]
+}
+
+package "Database" {
+    [Room DB]
+    [User DB]
+    [Booking DB]
+    [Maintenance DB]
+}
+
+[Web Interface] --> [Booking Service]
+[Mobile App] --> [Booking Service]
+[Booking Service] --> [Room DB]
+[Booking Service] --> [Booking DB]
+[Maintenance Service] --> [Room DB]
+[Maintenance Service] --> [Maintenance DB]
+@enduml
