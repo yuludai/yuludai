@@ -1,0 +1,13 @@
+@startuml activity diagram
+start
+:Select Room;
+:Select Maintenance Date;
+:Assign Technician;
+if (Technician Available?) then (yes)
+    :Schedule Maintenance;
+else (no)
+    :Select Another Technician;
+endif
+:Update Maintenance Schedule;
+stop
+@enduml
