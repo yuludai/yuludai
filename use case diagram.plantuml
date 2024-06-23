@@ -1,0 +1,12 @@
+@startuml use case diagram
+actor Admin
+actor Technician
+actor User
+
+Admin --> (Manage Rooms)
+Admin --> (Schedule Maintenance)
+User --> (Check Availability)
+User --> (Book Room)
+Technician --> (Monitor Environment)
+Technician --> (Resolve Issues)
+@enduml
