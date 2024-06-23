@@ -1,0 +1,12 @@
+@startuml squence diagram
+actor User
+User -> CRMS : Check Availability
+CRMS -> Room : Get Available Rooms
+Room --> CRMS : List of Available Rooms
+CRMS --> User : Display Available Rooms
+
+User -> CRMS : Book Room(roomID, startTime, endTime)
+CRMS -> Booking : Create Booking(userID, roomID, startTime, endTime)
+Booking --> CRMS : Confirmation
+CRMS --> User : Booking Confirmation
+@enduml
