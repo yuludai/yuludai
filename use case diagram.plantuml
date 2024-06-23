@@ -7,6 +7,8 @@ Admin --> (Manage Rooms)
 Admin --> (Schedule Maintenance)
 User --> (Check Availability)
 User --> (Book Room)
+User --> (Report Issues)
 Technician --> (Monitor Environment)
 Technician --> (Resolve Issues)
+Technician --> (Daily Log)
 @enduml
