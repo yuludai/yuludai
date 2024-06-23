@@ -1,0 +1,6 @@
+@startuml state diagram
+[*] --> Available
+Available --> Booked : Room Booked
+Booked --> Maintenance : Maintenance Scheduled
+Maintenance --> Available : Maintenance Completed
+@enduml
