@@ -1,0 +1,45 @@
+@startuml class diagram
+class Room {
+
+    int roomID
+    int capacity
+    String status
+}
+
+class Booking {
+    int bookingID
+    int userID
+    int roomID
+    Date startTime
+    Date endTime
+
+}
+
+class User {
+    int userID
+    String name
+    String role
+}
+
+class Admin {
+    int userID
+}
+
+class Technician {
+    int userID
+}
+
+class Maintenance {
+    int maintenanceID
+    int roomID
+    int technicianID
+    Date scheduleTime
+    String status
+}
+
+User <|-- Admin
+User <|-- Technician
+Room "1" -- "0..*" Booking : books
+Room "1" -- "0..*" Maintenance : maintained by
+Technician "1" -- "0..*" Maintenance : performs
+@enduml
